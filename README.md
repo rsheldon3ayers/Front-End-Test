@@ -11,9 +11,9 @@ As you address any bugs, please add any comments regarding the bug you may have 
 Anything QA hasn't found but you addressed, please note in the "Other" section.
 
 ## How to get started
-- Clone this repo to your repository.
-- Make a feature branch with all of your changes.
-- Make a pull request for the feature branch into the original branch.
+- Clone this repo to your repository. **DO NOT FORK THIS REPOSITORY**
+- Make a feature branch from your `main` with all of your changes.
+- Make a pull request for the feature branch into the `main` branch (all in your repository).
 - Send us a link the the pull request.
 
 ## Running the app
