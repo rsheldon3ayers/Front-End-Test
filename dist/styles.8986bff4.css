@@ -1,0 +1,59 @@
+.layout {
+    display: flex;
+    justify-content: center;
+}
+
+.detailButton {
+    background-color:blue;
+    color: white;
+    cursor:pointer;
+}
+    
+.deleteButton {
+    background-color:red;
+    color: white;
+    cursor:pointer;
+}
+
+.backButton {
+    background-color:white;
+    color:blue;
+    cursor:pointer;
+    border: none;
+}
+
+.headerContent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+tr {
+    outline: thin solid
+}
+
+th {
+    min-width: 200px;
+    height: 50px;
+    margin: 25px;
+}
+
+td {
+    min-width: 200px;
+    height: 50px;
+    margin: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button {
+    margin: 10px
+}
+
+
+/*# sourceMappingURL=/styles.8986bff4.css.map */

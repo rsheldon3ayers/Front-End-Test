@@ -18,6 +18,7 @@ const formatDate = (dateString) => {
 }
 
 export class Orders extends Component {
+
     static propTypes = {
 
     }
@@ -34,14 +35,15 @@ export class Orders extends Component {
     confirmDelete = () => {
         const { orders, selectedOrder } = this.state;
         const updated = orders.filter(({ id }) => id !== selectedOrder.id);
-        this.setState({ orders: updated}, () => {
+       this.setState({ orders: updated}, () => {
             this.clearSelected();
             this.deleteOrder();
         })
     }
-
+    
     componentDidMount () {
         this.setState({ orders: ordersData })
+         
     }
 
     render() {

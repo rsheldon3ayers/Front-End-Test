@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
 function DeleteOrder({ data, actions }) {
     const { customerName } = data;
     const { clearSelected, confirmDelete, deleteOrder } = actions;
+    
 
+    
     const handleClick = () => {
         clearSelected()
         deleteOrder()
+        confirmDelete()
     };
 
     return (
@@ -18,8 +22,7 @@ function DeleteOrder({ data, actions }) {
                     type="button"
                     className="detailButton"
                     onClick={() => {
-                        clearSelected()
-                        deleteOrder()
+                        handleClick()
                     }}
                 >
                     I changed my mind!
@@ -27,7 +30,7 @@ function DeleteOrder({ data, actions }) {
                 <button
                     type="button" 
                     className="deleteButton"
-                    onClick={confirmDelete()}
+                    onClick={() => {confirmDelete()}}
                 >
                     Trash it!
                 </button>

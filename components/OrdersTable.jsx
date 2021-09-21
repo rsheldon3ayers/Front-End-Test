@@ -8,9 +8,26 @@ const formatDate = (dateString) => {
     const month = monthNames[dateObj.getMonth()];
     const day = String(dateObj.getDate()).padStart(2, '0');
     const year = dateObj.getFullYear();
-    const hours = dateObj.getHours();
-    const minutes = dateObj.getMinutes();
-    return `${month} ${day}, ${year} - ${hours}:${minutes}`;
+   // format hours //
+    let h = dateObj.getHours();
+    let minutes = dateObj.getMinutes();
+    let am_pm = "AM";
+    let hours = h
+      if (hours >= 12) {
+        hours = h - 12;
+        am_pm = "PM";
+      }
+    if (hours == 0) {
+      hours = 12;
+     }
+     
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    let regex = new RegExp("0?" + h + ":" + minutes);
+    let expression = hours + ":" + minutes;
+    hours = hours.toString().replace(regex, expression);
+
+    
+    return `${month} ${day}, ${year} - ${hours}:${minutes} ${am_pm}`;
 }
 
 function OrdersTable({ data, actions }) {
